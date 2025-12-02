@@ -1,6 +1,6 @@
 [project]
 name = "aoc-2025"
 version = "0.1.0"
-description = "AOC 2025 Problems/Solutions"
+description = "AOC 2025 Solutions"
 requires-python = ">=3.13"
 dependencies = []
