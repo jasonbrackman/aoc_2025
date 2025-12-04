@@ -2,7 +2,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
-RE_NUMS = re.compile(r'\d+')
+RE_NUMS = re.compile(r"\d+")
 
 
 @dataclass
@@ -14,7 +14,7 @@ class Paths:
 
     def __post_init__(self):
         self._real = Path(self.p1)
-        self._test = self._real.with_stem(self._real.stem + '_test')
+        self._test = self._real.with_stem(self._real.stem + "_test")
 
     def get(self) -> Path:
         if self._option == 0:
@@ -32,8 +32,5 @@ class Paths:
         return self._option == 0
 
     def lines(self):
-        with open(self.get(), encoding='utf-8') as f:
-            return [l.strip() for l in f]
-
-
-
+        with open(self.get(), encoding="utf-8") as f:
+            return [line.strip() for line in f]

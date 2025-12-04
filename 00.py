@@ -1,4 +1,5 @@
-from helpers import Paths, RE_NUMS
+from helpers import RE_NUMS, Paths
+
 
 def parse(paths: Paths):
     lines = paths.lines()
@@ -12,7 +13,6 @@ def parse(paths: Paths):
     return l1, l2
 
 
-
 def part01(paths):
     # part 01
     l1, l2 = parse(paths)
@@ -24,6 +24,7 @@ def part01(paths):
     else:
         assert 11 == sum(t)
 
+
 def part02(paths):
     # part 02
     l1, l2 = parse(paths)
@@ -34,8 +35,13 @@ def part02(paths):
     else:
         assert 31 == sum(r)
 
-if __name__ == "__main__":
-    paths = Paths('./data/00.txt')
+
+def run() -> None:
+    paths = Paths("./data/00.txt")
     paths.set_option(1)
     part01(paths)
     part02(paths)
+
+
+if __name__ == "__main__":
+    run()
