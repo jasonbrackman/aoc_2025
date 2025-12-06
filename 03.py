@@ -40,6 +40,7 @@ def part02(paths: Paths) -> None:
 
 def run() -> None:
     paths = Paths("./data/03.txt")
+    part01(paths)
     part02(paths)
 
 

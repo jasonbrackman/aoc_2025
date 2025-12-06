@@ -38,7 +38,7 @@ def part02(paths):
 
 def run() -> None:
     paths = Paths("./data/00.txt")
-    paths.set_option(1)
+    paths.set_option(0)
     part01(paths)
     part02(paths)
 
